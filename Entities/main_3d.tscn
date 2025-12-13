@@ -1,8 +1,7 @@
-[gd_scene load_steps=11 format=4 uid="uid://cmh2xys8unpyw"]
+[gd_scene load_steps=7 format=3 uid="uid://cmh2xys8unpyw"]
 
 [ext_resource type="Script" uid="uid://d020sn5rguimb" path="res://Scripts/main_3d.gd" id="1_pt58c"]
 [ext_resource type="PackedScene" uid="uid://d4aygbnxpv38f" path="res://Entities/player.tscn" id="1_wiwsh"]
-[ext_resource type="Texture2D" uid="uid://b0rtohtb4uuuj" path="res://Blocks/glTF/Block_Grass_Atlas.png" id="2_j7e28"]
 [ext_resource type="PackedScene" uid="uid://cylduto540mk6" path="res://Entities/enemy.tscn" id="3_6rpgw"]
 [ext_resource type="Script" uid="uid://blc2nyy6lxkt6" path="res://Scripts/enemy.gd" id="4_afbbo"]
 
@@ -11,45 +10,6 @@ size = Vector3(200, 0.1, 200)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_j7e28"]
 size = Vector2(200, 200)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dtlj4"]
-resource_name = "Atlas"
-cull_mode = 2
-albedo_texture = ExtResource("2_j7e28")
-roughness = 0.5
-texture_filter = 2
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_i6aih"]
-_surfaces = [{
-"aabb": AABB(-1, -1, -1, 2, 2, 2),
-"format": 34359742465,
-"index_count": 108,
-"index_data": PackedByteArray("AAABAAIAAwACAAEAAwAEAAIABQADAAEAAAAFAAEABgAEAAMABQAGAAMABwACAAQABwAAAAIABgAHAAQACAAFAAAACQAGAAUACAAJAAUACQAKAAYACgAHAAYACwAAAAcACgALAAcACwAIAAAADAAKAAkADQALAAoADAANAAoADQAOAAsADgAIAAsADwAJAAgADgAPAAgADwAMAAkAEAAOAA0AEQAMAA8AEgAPAA4AEgARAA8AEAASAA4AEQATAAwAEwANAAwAEwARABIAEwAQAA0AEwASABAA"),
-"name": "Atlas",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 20,
-"vertex_data": PackedByteArray("AACAvwAAAD8AAIA/AACAvwAAgD8AAIC/AACAvwAAgD8AAIA/AACAPwAAgD8AAIC/AACAPwAAgD8AAIA/AACAvwAAAD8AAIC/AACAPwAAAD8AAIC/AACAPwAAAD8AAIA/AACAvwAAAAAAAIA/AACAvwAAAAAAAIC/AACAPwAAAAAAAIC/AACAPwAAAAAAAIA/AACAvwAAAL8AAIC/AACAPwAAAL8AAIC/AACAPwAAAL8AAIA/AACAvwAAAL8AAIA/AACAPwAAgL8AAIC/AACAvwAAgL8AAIA/AACAPwAAgL8AAIA/AACAvwAAgL8AAIC/")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_0s8ox"]
-resource_name = "Block_Grass_Cube_375"
-_surfaces = [{
-"aabb": AABB(-1, -1, -1, 2, 2, 2),
-"attribute_data": PackedByteArray("YCxuPtzlEj5gLG4+3OUSPmAsbj7c5RI+YCxuPtzlEj5gLG4+3OUSPmAsbj7c5RI+YCxuPtzlEj5gLG4+3OUSPmAsbj7c5RI+YCxuPtzlEj5gLG4+3OUSPmAsbj7c5RI+YCxuPtzlEj5gLG4+3OUSPmAsbj7c5RI+YCxuPtzlEj4EFy0+rBoSPgQXLT6sGhI+BBctPqwaEj4EFy0+rBoSPmAsbj7c5RI+YCxuPtzlEj5gLG4+3OUSPmAsbj7c5RI+BBctPqwaEj4EFy0+rBoSPgQXLT6sGhI+BBctPqwaEj6imVE+vCIOPqKZUT68Ig4+oplRPrwiDj6imVE+vCIOPgQXLT6sGhI+BBctPqwaEj4EFy0+rBoSPgQXLT6sGhI+BBctPqwaEj4EFy0+rBoSPgQXLT6sGhI+BBctPqwaEj6imVE+vCIOPqKZUT68Ig4+oplRPrwiDj6imVE+vCIOPgQXLT6sGhI+BBctPqwaEj4EFy0+rBoSPgQXLT6sGhI+BBctPqwaEj4EFy0+rBoSPgQXLT6sGhI+BBctPqwaEj6imVE+vCIOPqKZUT68Ig4+oplRPrwiDj6imVE+vCIOPgQXLT6sGhI+BBctPqwaEj4EFy0+rBoSPgQXLT6sGhI+BBctPqwaEj4EFy0+rBoSPgQXLT6sGhI+BBctPqwaEj6imVE+vCIOPqKZUT68Ig4+oplRPrwiDj6imVE+vCIOPgQXLT6sGhI+BBctPqwaEj4EFy0+rBoSPgQXLT6sGhI+"),
-"format": 34359742487,
-"index_count": 108,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0AMAAxADIAMAAzADEANAA1ADYANAA3ADUAOAA5ADoAOAA7ADkAPAA9AD4APAA/AD0AQABBAEIAQABDAEEARABFAEYARABHAEUA"),
-"material": SubResource("StandardMaterial3D_dtlj4"),
-"name": "Atlas",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 72,
-"vertex_data": PackedByteArray("AACAvwAAAD8AAIA/AACAvwAAgD8AAIC/AACAvwAAgD8AAIA/AACAvwAAAD8AAIC/AACAvwAAAD8AAIC/AACAPwAAgD8AAIC/AACAvwAAgD8AAIC/AACAPwAAAD8AAIC/AACAPwAAAD8AAIC/AACAPwAAgD8AAIA/AACAPwAAgD8AAIC/AACAPwAAAD8AAIA/AACAPwAAAD8AAIA/AACAvwAAgD8AAIA/AACAPwAAgD8AAIA/AACAvwAAAD8AAIA/AACAvwAAgL8AAIC/AACAPwAAgL8AAIA/AACAPwAAgL8AAIC/AACAvwAAgL8AAIA/AACAPwAAgD8AAIC/AACAvwAAgD8AAIA/AACAvwAAgD8AAIC/AACAPwAAgD8AAIA/AACAPwAAgL8AAIA/AACAvwAAAL8AAIA/AACAPwAAAL8AAIA/AACAvwAAgL8AAIA/AACAPwAAAL8AAIA/AACAvwAAAAAAAIA/AACAPwAAAAAAAIA/AACAvwAAAL8AAIA/AACAPwAAAAAAAIA/AACAvwAAAD8AAIA/AACAPwAAAD8AAIA/AACAvwAAAAAAAIA/AACAPwAAgL8AAIC/AACAPwAAAL8AAIA/AACAPwAAAL8AAIC/AACAPwAAgL8AAIA/AACAPwAAAL8AAIC/AACAPwAAAAAAAIA/AACAPwAAAAAAAIC/AACAPwAAAL8AAIA/AACAPwAAAAAAAIC/AACAPwAAAD8AAIA/AACAPwAAAD8AAIC/AACAPwAAAAAAAIA/AACAvwAAgL8AAIC/AACAPwAAAL8AAIC/AACAvwAAAL8AAIC/AACAPwAAgL8AAIC/AACAvwAAAL8AAIC/AACAPwAAAAAAAIC/AACAvwAAAAAAAIC/AACAPwAAAL8AAIC/AACAvwAAAAAAAIC/AACAPwAAAD8AAIC/AACAvwAAAD8AAIC/AACAPwAAAAAAAIC/AACAvwAAgL8AAIA/AACAvwAAAL8AAIC/AACAvwAAAL8AAIA/AACAvwAAgL8AAIC/AACAvwAAAL8AAIA/AACAvwAAAAAAAIC/AACAvwAAAAAAAIA/AACAvwAAAL8AAIC/AACAvwAAAAAAAIA/AACAvwAAAD8AAIC/AACAvwAAAD8AAIA/AACAvwAAAAAAAIC/AAD/f////78AAP9/////vwAA/3////+/AAD/f////7//////////v/////////+//////////7//////////v////3////+/////f////7////9/////v////3////+//3//f////z//f/9/////P/9//3////8//3//f////z//fwAA////v/9/AAD///+//38AAP///7//fwAA////v/9///////+//3///////7//f///////v/9///////+//3//f////z//f/9/////P/9//3////8//3//f////z//f/9/////P/9//3////8//3//f////z//f/9/////P/9//3////8//3//f////z//f/9/////P/9//3////8/////f////7////9/////v////3////+/////f////7////9/////v////3////+/////f////7////9/////v////3////+/////f////7////9/////v////3////+//////////7//////////v/////////+//////////7//////////v/////////+//////////7//////////v/////////+//////////7//////////v/////////+/AAD/f////78AAP9/////vwAA/3////+/AAD/f////78AAP9/////vwAA/3////+/AAD/f////78AAP9/////vwAA/3////+/AAD/f////78AAP9/////vwAA/3////+/")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_i6aih")
 
 [node name="Main_3D" type="Node3D"]
 script = ExtResource("1_pt58c")
@@ -64,13 +24,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.004751861, 0)
 shape = SubResource("BoxShape3D_afbbo")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
-visible = false
 mesh = SubResource("PlaneMesh_j7e28")
-
-[node name="Block_Grass" type="MeshInstance3D" parent="Floor"]
-transform = Transform3D(-4.152582e-06, 0, -95, 0, 95, 0, 95, 0, -4.152582e-06, 6.8052797, -94.22377, -1.5010753)
-mesh = SubResource("ArrayMesh_0s8ox")
-skeleton = NodePath("")
 
 [node name="Player" parent="." instance=ExtResource("1_wiwsh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.73572266, 0)

@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://8aegmeyv3dwy"]
+
+[ext_resource type="Script" uid="uid://cla5bwm3dd7w7" path="res://Scripts/main_menu.gd" id="1_tyc76"]
+[ext_resource type="Texture2D" uid="uid://cvv2gugrijsxs" path="res://assets/Gemini_Generated_Image_cryb1ycryb1ycryb.png" id="2_aigrt"]
+[ext_resource type="FontFile" uid="uid://ban2ue7efgjp7" path="res://fonts/Metal Glass.otf" id="3_uiqfy"]
+[ext_resource type="FontFile" uid="uid://s5u46ldwkka8" path="res://fonts/Pixel-Regular.ttf" id="4_s1cog"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_tyc76")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -150.0
+offset_top = -57.0
+offset_right = 1322.0
+offset_bottom = 647.0
+texture = ExtResource("2_aigrt")
+
+[node name="PlayButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 433.0
+offset_top = 277.0
+offset_right = 661.0
+offset_bottom = 360.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_uiqfy")
+theme_override_font_sizes/font_size = 50
+text = "Jugar"
+
+[node name="GameTitle" type="Label" parent="."]
+layout_mode = 0
+offset_left = 131.0
+offset_top = 77.0
+offset_right = 1023.0
+offset_bottom = 148.0
+theme_override_colors/font_color = Color(0, 0, 0.99607843, 1)
+theme_override_fonts/font = ExtResource("4_s1cog")
+theme_override_font_sizes/font_size = 70
+text = "Arena Survival Game"
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
