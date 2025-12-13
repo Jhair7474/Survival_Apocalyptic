@@ -1,15 +1,21 @@
 extends CharacterBody3D
 
-# Esta es la variable que el script Main.gd necesita para asignar el jugador.
-# La declaramos sin tipado estricto para evitar el error anterior.
-var player = null 
+# Esta variable es asignada desde Main.gd
+var player = null
 
 @export var speed: float = 2.0 
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity") 
 
-# Estadísticas (Mínimo requerido para la progresión)
+# Estadísticas de Contenido (requisito: vida y XP)
 var health: int = 10 
 var xp_value: int = 1 
+
+# --- ANIMACIONES: ¡VERIFICA ESTAS LÍNEAS! ---
+# Reemplaza con la ruta exacta del AnimationPlayer de tu enemigo.
+@onready var anim_player: AnimationPlayer = $Skeleton/AnimationPlayer # Usando Skeleton como ejemplo
+const ANIM_IDLE = "Idle" 
+const ANIM_RUN = "Run"   
+# ---------------------------------------------
 
 
 func _physics_process(delta: float) -> void:
@@ -29,7 +35,11 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction_to_player.x * speed
 		velocity.z = direction_to_player.z * speed
 		
-		# (Opcional) Rotar para que el enemigo mire hacia donde se mueve
+		# Control de Animación: Correr/Caminar (mientras persigue)
+		if anim_player and anim_player.current_animation != ANIM_RUN:
+			anim_player.play(ANIM_RUN)
+		
+		# Rotar para que el enemigo mire hacia donde se mueve
 		look_at(player.global_position, Vector3.UP)
 		
 	else:
@@ -37,10 +47,14 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, speed)
 		velocity.z = move_toward(velocity.z, 0, speed)
 		
+		# Control de Animación: Detenerse
+		if anim_player and anim_player.current_animation != ANIM_IDLE:
+			anim_player.play(ANIM_IDLE)
+		
 	move_and_slide()
 
 
-# Función para que el proyectil del jugador aplique daño
+# Función llamada por el proyectil del jugador
 func take_damage(amount: int):
 	health -= amount
 	print(name, " ha recibido ", amount, " de daño. Vida restante: ", health)
@@ -50,5 +64,4 @@ func take_damage(amount: int):
 
 func die():
 	print(name, " ha sido destruido.")
-	# Aquí se generará el objeto de XP (más adelante)
 	queue_free() # Destruye el enemigo
