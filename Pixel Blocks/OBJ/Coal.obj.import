@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dch8cc3lmh167"
+path="res://.godot/imported/Coal.obj-0e42e3369fb18eedb954b0de47687d99.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Coal.obj-0e42e3369fb18eedb954b0de47687d99.mesh"]
+
+source_file="res://Pixel Blocks/OBJ/Coal.obj"
+dest_files=["res://.godot/imported/Coal.obj-0e42e3369fb18eedb954b0de47687d99.mesh", "res://.godot/imported/Coal.obj-0e42e3369fb18eedb954b0de47687d99.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

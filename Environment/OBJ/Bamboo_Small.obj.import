@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cf0g706b01wt7"
+path="res://.godot/imported/Bamboo_Small.obj-94205818f5a4fdce453fdaada5c6167e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Bamboo_Small.obj-94205818f5a4fdce453fdaada5c6167e.mesh"]
+
+source_file="res://Environment/OBJ/Bamboo_Small.obj"
+dest_files=["res://.godot/imported/Bamboo_Small.obj-94205818f5a4fdce453fdaada5c6167e.mesh", "res://.godot/imported/Bamboo_Small.obj-94205818f5a4fdce453fdaada5c6167e.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

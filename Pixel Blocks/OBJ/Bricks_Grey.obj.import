@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d0uaih5hgdl3q"
+path="res://.godot/imported/Bricks_Grey.obj-3ede7695737b5836b21b8a9225a93242.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Bricks_Grey.obj-3ede7695737b5836b21b8a9225a93242.mesh"]
+
+source_file="res://Pixel Blocks/OBJ/Bricks_Grey.obj"
+dest_files=["res://.godot/imported/Bricks_Grey.obj-3ede7695737b5836b21b8a9225a93242.mesh", "res://.godot/imported/Bricks_Grey.obj-3ede7695737b5836b21b8a9225a93242.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

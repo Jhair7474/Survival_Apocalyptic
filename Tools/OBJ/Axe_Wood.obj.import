@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c85ebcgr4ppsv"
+path="res://.godot/imported/Axe_Wood.obj-78b47fb88ec1f354535ea6f5e9f06f3f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Axe_Wood.obj-78b47fb88ec1f354535ea6f5e9f06f3f.mesh"]
+
+source_file="res://Tools/OBJ/Axe_Wood.obj"
+dest_files=["res://.godot/imported/Axe_Wood.obj-78b47fb88ec1f354535ea6f5e9f06f3f.mesh", "res://.godot/imported/Axe_Wood.obj-78b47fb88ec1f354535ea6f5e9f06f3f.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
