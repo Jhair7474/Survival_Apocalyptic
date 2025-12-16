@@ -6,8 +6,8 @@ func _ready():
 	
 	# --- 2. OBTENEMOS LAS REFERENCIAS DE CADA ENEMIGO ---
 	# Asegúrate de que los nombres ($Enemy, $Zombie) coincidan con los nodos de tu escena.
-	var demon_node = $Enemy # Si tu demonio se llama 'Enemy'
-	var zombie_node = $Enemy2 # Si tu zombi se llama 'Zombie'
+	var demon_node = $Mob_Demon # Si tu demonio se llama 'Enemy'
+	var zombie_node = $Mob_Zombie # Si tu zombi se llama 'Zombie'
 	# ----------------------------------------------------
 
 	# 3. Conectamos la referencia del jugador a CADA script de enemigo
