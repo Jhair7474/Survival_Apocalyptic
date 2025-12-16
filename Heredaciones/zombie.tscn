@@ -8,5 +8,18 @@ albedo_texture = ExtResource("2_i000e")
 
 [node name="Zombie" instance=ExtResource("1_bfdda")]
 
+[node name="Skeleton3D" parent="EnemyArmature" index="0"]
+bones/1/position = Vector3(0.17826405, 0.86188567, 0.09209831)
+bones/1/rotation = Quaternion(1, 0, -4.371139e-08, -1.4901161e-07)
+bones/2/position = Vector3(-0.17826405, 0.86188567, 0.09209831)
+bones/2/rotation = Quaternion(1, 0, -4.371139e-08, -1.4156102e-07)
+bones/3/position = Vector3(0, 0.96849275, 0)
+bones/3/rotation = Quaternion(0, 0, 0, 1)
+bones/4/position = Vector3(5.506205e-10, 0.72775817, 0.29368567)
+bones/5/position = Vector3(0.47293088, 0.7320683, 6.207182e-08)
+bones/5/rotation = Quaternion(1.1263184e-07, -1.0506302e-07, 0.99570984, -0.09253122)
+bones/6/position = Vector3(-0.4508581, 0.7320683, 6.237809e-08)
+bones/6/rotation = Quaternion(-1.1175871e-07, -1.2335659e-07, 0.9957098, 0.092531145)
+
 [node name="Cube_000" parent="EnemyArmature/Skeleton3D" index="0"]
 surface_material_override/0 = SubResource("StandardMaterial3D_06chb")
