@@ -1,17 +1,17 @@
 [gd_scene load_steps=4 format=3 uid="uid://c7mp4vge02ogn"]
 
-[ext_resource type="PackedScene" uid="uid://op2rvm6yvgf1" path="res://Enemies/glTF/Zombie.gltf" id="1_ojnmg"]
 [ext_resource type="Script" uid="uid://dlv2h01mkra5a" path="res://Scripts/enemy_2.gd" id="1_uhogk"]
+[ext_resource type="PackedScene" uid="uid://bx7633toi8pk4" path="res://Heredaciones/zombie.tscn" id="2_uhogk"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_uhogk"]
-size = Vector3(1.6447754, 2.5424805, 1.086853)
+size = Vector3(1.6447754, 2.6256104, 1.1557312)
 
 [node name="Enemy2" type="CharacterBody3D"]
 script = ExtResource("1_uhogk")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.011745095, 1.3914328, 0.1156311)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.011745095, 1.4186417, -0.10476321)
 shape = SubResource("BoxShape3D_uhogk")
 
-[node name="Zombie" parent="." instance=ExtResource("1_ojnmg")]
+[node name="Zombie" parent="." instance=ExtResource("2_uhogk")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)

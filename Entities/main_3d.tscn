@@ -33,9 +33,9 @@ mesh = SubResource("PlaneMesh_j7e28")
 [node name="Player" parent="." instance=ExtResource("1_wiwsh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.035892487, 0)
 
-[node name="Enemy" parent="." instance=ExtResource("3_6rpgw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.6853719, 5.0702715)
+[node name="Mob_Demon" parent="." instance=ExtResource("3_6rpgw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.069359064, 5.0702715)
 script = ExtResource("4_afbbo")
 
-[node name="Enemy2" parent="." instance=ExtResource("7_ocjag")]
+[node name="Mob_Zombie" parent="." instance=ExtResource("7_ocjag")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.147828, 0.5563793, 4.366351)

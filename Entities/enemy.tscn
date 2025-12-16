@@ -1,15 +1,15 @@
 [gd_scene load_steps=3 format=3 uid="uid://cylduto540mk6"]
 
-[ext_resource type="PackedScene" uid="uid://bdss8ihnpvmn1" path="res://Enemies/glTF/Demon.gltf" id="1_7qchm"]
+[ext_resource type="PackedScene" uid="uid://cd4ww3kibouek" path="res://Heredaciones/demon.tscn" id="1_7qchm"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7qchm"]
-size = Vector3(1.7401276, 2.7192612, 1.3669434)
+size = Vector3(1.7611771, 2.5885067, 1.366394)
 
 [node name="Enemy" type="CharacterBody3D"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08817291, 2.1199532, -0.18347168)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07764816, 1.3985815, -0.12283325)
 shape = SubResource("BoxShape3D_7qchm")
 
 [node name="Demon" parent="." instance=ExtResource("1_7qchm")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0.08229327, 0.73675275, -0.34150982)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
