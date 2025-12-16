@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://cmh2xys8unpyw"]
+[gd_scene load_steps=10 format=3 uid="uid://cmh2xys8unpyw"]
 
 [ext_resource type="Script" uid="uid://d020sn5rguimb" path="res://Scripts/main_3d.gd" id="1_pt58c"]
 [ext_resource type="PackedScene" uid="uid://d4aygbnxpv38f" path="res://Entities/player.tscn" id="1_wiwsh"]
+[ext_resource type="Texture2D" uid="uid://dawahdwwnubxr" path="res://assets/rocky_terrain_02_diff_4k.jpg" id="2_0s8ox"]
 [ext_resource type="PackedScene" uid="uid://cylduto540mk6" path="res://Entities/enemy.tscn" id="3_6rpgw"]
 [ext_resource type="Script" uid="uid://blc2nyy6lxkt6" path="res://Scripts/enemy.gd" id="4_afbbo"]
 [ext_resource type="PackedScene" uid="uid://c7mp4vge02ogn" path="res://Entities/enemy_2.tscn" id="7_ocjag"]
@@ -11,6 +12,9 @@ size = Vector3(200, 0.1, 200)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_j7e28"]
 size = Vector2(200, 200)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j7e28"]
+albedo_texture = ExtResource("2_0s8ox")
 
 [node name="Main_3D" type="Node3D"]
 script = ExtResource("1_pt58c")
@@ -29,6 +33,7 @@ shape = SubResource("BoxShape3D_afbbo")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
 mesh = SubResource("PlaneMesh_j7e28")
+surface_material_override/0 = SubResource("StandardMaterial3D_j7e28")
 
 [node name="Player" parent="." instance=ExtResource("1_wiwsh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.035892487, 0)
