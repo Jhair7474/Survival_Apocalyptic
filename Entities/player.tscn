@@ -4,15 +4,14 @@
 [ext_resource type="PackedScene" uid="uid://bcjglfjbj6owj" path="res://Heredaciones/character_male_2.tscn" id="2_gb1tc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tcnsb"]
-size = Vector3(2.5757785, 2.557373, 1.3313904)
+size = Vector3(1.0836364, 2.557373, 0.6672338)
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_tcnsb")
 projectile_offset = Vector3(0, 1, 1)
-shoot_forward_vector = Vector3(0, 0, 1)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.004566908, 1.2754297, 0.027589977)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.006043136, 1.2754297, -0.11407733)
 shape = SubResource("BoxShape3D_tcnsb")
 
 [node name="Camera3D" type="Camera3D" parent="."]
