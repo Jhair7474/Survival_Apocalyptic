@@ -1,17 +1,16 @@
-[gd_scene load_steps=19 format=3 uid="uid://cmh2xys8unpyw"]
+[gd_scene load_steps=18 format=3 uid="uid://cmh2xys8unpyw"]
 
 [ext_resource type="Script" uid="uid://d020sn5rguimb" path="res://Scripts/main_3d.gd" id="1_pt58c"]
 [ext_resource type="PackedScene" uid="uid://d4aygbnxpv38f" path="res://Entities/player.tscn" id="1_wiwsh"]
 [ext_resource type="Texture2D" uid="uid://dawahdwwnubxr" path="res://assets/rocky_terrain_02_diff_4k.jpg" id="2_0s8ox"]
 [ext_resource type="PackedScene" uid="uid://cylduto540mk6" path="res://Entities/enemy.tscn" id="3_6rpgw"]
-[ext_resource type="PackedScene" uid="uid://d1ch2fmjf0nij" path="res://Entities/ambientacion-tree.tscn" id="3_ocjag"]
-[ext_resource type="Script" uid="uid://blc2nyy6lxkt6" path="res://Scripts/enemy.gd" id="4_afbbo"]
-[ext_resource type="PackedScene" uid="uid://oqm01fgu6v47" path="res://Heredaciones/cristales.tscn" id="4_mwwex"]
-[ext_resource type="PackedScene" uid="uid://laww7fm1372i" path="res://Heredaciones/flores.tscn" id="5_nm6cl"]
-[ext_resource type="PackedScene" uid="uid://d0vya7haesvik" path="res://Entities/bush_2.tscn" id="6_wqp3n"]
-[ext_resource type="PackedScene" uid="uid://c4qe325tq7dw7" path="res://Heredaciones/ArbolMuerto1.tscn" id="7_f6xsg"]
+[ext_resource type="PackedScene" path="res://Entities/ambientacion-tree.tscn" id="3_ocjag"]
+[ext_resource type="PackedScene" path="res://Heredaciones/cristales.tscn" id="4_mwwex"]
+[ext_resource type="PackedScene" path="res://Heredaciones/flores.tscn" id="5_nm6cl"]
+[ext_resource type="PackedScene" path="res://Entities/bush_2.tscn" id="6_wqp3n"]
+[ext_resource type="PackedScene" path="res://Heredaciones/ArbolMuerto1.tscn" id="7_f6xsg"]
 [ext_resource type="PackedScene" uid="uid://c7mp4vge02ogn" path="res://Entities/enemy_2.tscn" id="7_ocjag"]
-[ext_resource type="PackedScene" uid="uid://chvgf4plyx2ny" path="res://Heredaciones/arbol_muerto_3.tscn" id="8_00b45"]
+[ext_resource type="PackedScene" path="res://Heredaciones/arbol_muerto_3.tscn" id="8_00b45"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_afbbo"]
 size = Vector3(200, 0.1, 200)
@@ -35,6 +34,8 @@ ambient_light_energy = 2.0
 
 [node name="Main_3D" type="Node3D"]
 script = ExtResource("1_pt58c")
+demon_scene = ExtResource("3_6rpgw")
+zombie_scene = ExtResource("7_ocjag")
 
 [node name="Floor" type="StaticBody3D" parent="."]
 
@@ -948,13 +949,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.312016, -0.018874168, -30
 
 [node name="Player" parent="." instance=ExtResource("1_wiwsh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.035892487, 0)
-
-[node name="Mob_Demon" parent="." instance=ExtResource("3_6rpgw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.069359064, 5.0702715)
-script = ExtResource("4_afbbo")
-
-[node name="Mob_Zombie" parent="." instance=ExtResource("7_ocjag")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.147828, 0.5563793, 4.366351)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_mwwex")
