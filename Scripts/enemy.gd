@@ -1,5 +1,6 @@
 extends CharacterBody3D
 
+signal enemy_died # Avisa al Main que este enemigo murió
 var player = null
 
 @export var speed: float = 3.0 
@@ -119,7 +120,12 @@ func take_damage(amount: int):
 		anim_player.play(ANIM_HIT)
 
 func die():
+	if is_dead: return # Evitar morir dos veces
 	is_dead = true
+	
+	# --- AGREGAR ESTO: Emitir la señal INMEDIATAMENTE al morir ---
+	enemy_died.emit() 
+	
 	# Desactivar colisiones
 	if has_node("CollisionShape3D"):
 		$CollisionShape3D.set_deferred("disabled", true)
