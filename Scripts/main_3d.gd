@@ -12,7 +12,8 @@ const MENU_SCENE_PATH = "res://Entities/main_menu.tscn"
 # --- CONFIGURACIÓN DE ENEMIGOS (Inspector) ---
 @export_group("Configuración de Enemigos")
 @export var demon_scene: PackedScene 
-@export var zombie_scene: PackedScene 
+@export var zombie_scene: PackedScene
+@export var Giant_scene: PackedScene 
 
 # --- CONFIGURACIÓN DE OLEADAS (Inspector) ---
 @export_group("Configuración de Olas")
@@ -90,11 +91,20 @@ func spawn_horde(count: int, bonus_damage: int):
 func spawn_random_enemy(bonus_damage: int):
 	if not player_ref: return
 	
-	# 1. Elegir enemigo aleatorio
-	var chosen_scene = demon_scene
-	if randf() > 0.5: # 50% probabilidad
+	# 1. Elegir enemigo con probabilidades
+	var chosen_scene: PackedScene
+	var chance = randf() # Genera un número entre 0.0 y 1.0
+
+	if chance < 0.20:
+		# 10% de probabilidad: GIGANTE
+		chosen_scene = Giant_scene
+	elif chance < 0.55:
+		# 45% de probabilidad: ZOMBIE (de 0.10 a 0.55)
 		chosen_scene = zombie_scene
-		
+	else:
+		# 45% de probabilidad: DEMONIO (de 0.55 a 1.0)
+		chosen_scene = demon_scene
+
 	if chosen_scene == null:
 		print("ERROR: Faltan asignar las escenas de enemigos en el Inspector.")
 		return
@@ -119,7 +129,7 @@ func spawn_random_enemy(bonus_damage: int):
 	if "attack_damage" in enemy_instance:
 		enemy_instance.attack_damage += bonus_damage
 	
-	# 5. Conectar señal de muerte para contar puntos y progreso
+	# 5. Conectar señal de muerte
 	enemy_instance.enemy_died.connect(_on_enemy_died)
 	
 	add_child(enemy_instance)
@@ -132,6 +142,7 @@ func _on_enemy_died():
 	
 	# Aumentar puntaje (+10 por enemigo)
 	score += 10
+	
 	
 	# Actualizar el HUD
 	if hud:

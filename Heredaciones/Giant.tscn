@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dr8ft1dc2gldk"]
+
+[ext_resource type="Script" uid="uid://b5etk418ndv8k" path="res://Scripts/giant.gd" id="1_c5nis"]
+[ext_resource type="PackedScene" uid="uid://bg6tj0kdrox84" path="res://Entities/giant_2.tscn" id="1_qqaxi"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c5nis"]
+size = Vector3(1.6328735, 3.949707, 1.2052002)
+
+[node name="Giant" type="CharacterBody3D"]
+script = ExtResource("1_c5nis")
+
+[node name="Giant2" parent="." instance=ExtResource("1_qqaxi")]
+transform = Transform3D(-0.9987114, 0, 0.050749816, 0, 1, 0, -0.050749816, 0, -0.9987114, 0.44471598, 0.49174857, 0.5299076)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-0.9987114, 0, 0.050749816, 0, 1, 0, -0.050749816, 0, -0.9987114, 0.4343624, 2.421192, 0.56987715)
+shape = SubResource("BoxShape3D_c5nis")

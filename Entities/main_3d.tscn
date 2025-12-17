@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://cmh2xys8unpyw"]
+[gd_scene load_steps=37 format=3 uid="uid://cmh2xys8unpyw"]
 
 [ext_resource type="Script" uid="uid://d020sn5rguimb" path="res://Scripts/main_3d.gd" id="1_pt58c"]
 [ext_resource type="PackedScene" uid="uid://d4aygbnxpv38f" path="res://Entities/player.tscn" id="1_wiwsh"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cylduto540mk6" path="res://Entities/enemy.tscn" id="3_6rpgw"]
 [ext_resource type="PackedScene" uid="uid://d1ch2fmjf0nij" path="res://Entities/ambientacion-tree.tscn" id="3_ocjag"]
 [ext_resource type="PackedScene" uid="uid://oqm01fgu6v47" path="res://Heredaciones/cristales.tscn" id="4_mwwex"]
+[ext_resource type="PackedScene" uid="uid://dr8ft1dc2gldk" path="res://Heredaciones/Giant.tscn" id="4_tl855"]
 [ext_resource type="PackedScene" uid="uid://laww7fm1372i" path="res://Heredaciones/flores.tscn" id="5_nm6cl"]
 [ext_resource type="PackedScene" uid="uid://d0vya7haesvik" path="res://Entities/bush_2.tscn" id="6_wqp3n"]
 [ext_resource type="PackedScene" uid="uid://c4qe325tq7dw7" path="res://Heredaciones/ArbolMuerto1.tscn" id="7_f6xsg"]
@@ -68,6 +69,7 @@ ambient_light_energy = 2.0
 script = ExtResource("1_pt58c")
 demon_scene = ExtResource("3_6rpgw")
 zombie_scene = ExtResource("7_ocjag")
+Giant_scene = ExtResource("4_tl855")
 
 [node name="Floor" type="StaticBody3D" parent="."]
 
