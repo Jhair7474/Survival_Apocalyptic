@@ -5,20 +5,20 @@
 [ext_resource type="Texture2D" uid="uid://dawahdwwnubxr" path="res://assets/rocky_terrain_02_diff_4k.jpg" id="2_0s8ox"]
 [ext_resource type="PackedScene" uid="uid://cylduto540mk6" path="res://Entities/enemy.tscn" id="3_6rpgw"]
 [ext_resource type="PackedScene" path="res://Entities/ambientacion-tree.tscn" id="3_ocjag"]
-[ext_resource type="Script" uid="uid://blc2nyy6lxkt6" path="res://Scripts/enemy.gd" id="4_afbbo"]
 [ext_resource type="PackedScene" path="res://Heredaciones/cristales.tscn" id="4_mwwex"]
 [ext_resource type="PackedScene" path="res://Heredaciones/flores.tscn" id="5_nm6cl"]
 [ext_resource type="PackedScene" path="res://Entities/bush_2.tscn" id="6_wqp3n"]
 [ext_resource type="PackedScene" path="res://Heredaciones/ArbolMuerto1.tscn" id="7_f6xsg"]
 [ext_resource type="PackedScene" uid="uid://c7mp4vge02ogn" path="res://Entities/enemy_2.tscn" id="7_ocjag"]
 [ext_resource type="PackedScene" path="res://Heredaciones/arbol_muerto_3.tscn" id="8_00b45"]
-[ext_resource type="PackedScene" uid="uid://wt08mj65w5h7" path="res://Heredaciones/MedievalHouse1.tscn" id="9_7rl1c"]
-[ext_resource type="PackedScene" uid="uid://v4ssqjwjol2" path="res://Heredaciones/MedievalHouse2.tscn" id="10_63vju"]
-[ext_resource type="PackedScene" uid="uid://dy3o54ktm8442" path="res://Heredaciones/MedievalHouse3.tscn" id="11_bwf02"]
-[ext_resource type="PackedScene" uid="uid://v1amec3gpfjm" path="res://Heredaciones/MedievalHouse4.tscn" id="12_ic8mj"]
-[ext_resource type="PackedScene" uid="uid://bbmmognp2cqde" path="res://Heredaciones/Lapida.tscn" id="13_bwf02"]
-[ext_resource type="PackedScene" uid="uid://0adjpwr16rug" path="res://Heredaciones/CarretaMuertos.tscn" id="14_ic8mj"]
-[ext_resource type="PackedScene" uid="uid://c1pe1vl34po6a" path="res://Heredaciones/Muerto.tscn" id="15_ic8mj"]
+[ext_resource type="PackedScene" path="res://Heredaciones/MedievalHouse1.tscn" id="9_7rl1c"]
+[ext_resource type="PackedScene" path="res://Heredaciones/MedievalHouse2.tscn" id="10_63vju"]
+[ext_resource type="PackedScene" path="res://Heredaciones/MedievalHouse3.tscn" id="11_bwf02"]
+[ext_resource type="PackedScene" uid="uid://lhi2o0rpp3dx" path="res://Entities/HUD.tscn" id="12_00b45"]
+[ext_resource type="PackedScene" path="res://Heredaciones/MedievalHouse4.tscn" id="12_ic8mj"]
+[ext_resource type="PackedScene" path="res://Heredaciones/Lapida.tscn" id="13_bwf02"]
+[ext_resource type="PackedScene" path="res://Heredaciones/CarretaMuertos.tscn" id="14_ic8mj"]
+[ext_resource type="PackedScene" path="res://Heredaciones/Muerto.tscn" id="15_ic8mj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_afbbo"]
 size = Vector3(200, 0.1, 200)
@@ -1207,3 +1207,5 @@ transform = Transform3D(0.9684588, 0.22283062, 0.11150798, -0.15795286, 0.202899
 light_energy = 3.0
 light_indirect_energy = 0.175
 light_volumetric_fog_energy = 1.66
+
+[node name="HUD" parent="." instance=ExtResource("12_00b45")]
