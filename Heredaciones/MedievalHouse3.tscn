@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://dy3o54ktm8442"]
 
-[ext_resource type="PackedScene" uid="uid://dbhei6v5ojgkj" path="res://Mediaval/House3/scene.gltf" id="1_v7k48"]
+[ext_resource type="PackedScene" uid="uid://dbhei6v5ojgkj" path="res://GlobalAsset/Mediaval/House3/scene.gltf" id="1_v7k48"]
 
 [node name="Sketchfab_Scene" instance=ExtResource("1_v7k48")]

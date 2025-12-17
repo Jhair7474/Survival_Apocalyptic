@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
 [gd_scene load_steps=33 format=3 uid="uid://cmh2xys8unpyw"]
-=======
-[gd_scene load_steps=19 format=3 uid="uid://cmh2xys8unpyw"]
->>>>>>> Stashed changes
 
 [ext_resource type="Script" uid="uid://d020sn5rguimb" path="res://Scripts/main_3d.gd" id="1_pt58c"]
 [ext_resource type="PackedScene" uid="uid://d4aygbnxpv38f" path="res://Entities/player.tscn" id="1_wiwsh"]
@@ -16,7 +12,6 @@
 [ext_resource type="PackedScene" path="res://Heredaciones/ArbolMuerto1.tscn" id="7_f6xsg"]
 [ext_resource type="PackedScene" uid="uid://c7mp4vge02ogn" path="res://Entities/enemy_2.tscn" id="7_ocjag"]
 [ext_resource type="PackedScene" path="res://Heredaciones/arbol_muerto_3.tscn" id="8_00b45"]
-<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://wt08mj65w5h7" path="res://Heredaciones/MedievalHouse1.tscn" id="9_7rl1c"]
 [ext_resource type="PackedScene" uid="uid://v4ssqjwjol2" path="res://Heredaciones/MedievalHouse2.tscn" id="10_63vju"]
 [ext_resource type="PackedScene" uid="uid://dy3o54ktm8442" path="res://Heredaciones/MedievalHouse3.tscn" id="11_bwf02"]
@@ -24,9 +19,6 @@
 [ext_resource type="PackedScene" uid="uid://bbmmognp2cqde" path="res://Heredaciones/Lapida.tscn" id="13_bwf02"]
 [ext_resource type="PackedScene" uid="uid://0adjpwr16rug" path="res://Heredaciones/CarretaMuertos.tscn" id="14_ic8mj"]
 [ext_resource type="PackedScene" uid="uid://c1pe1vl34po6a" path="res://Heredaciones/Muerto.tscn" id="15_ic8mj"]
-=======
-[ext_resource type="PackedScene" uid="uid://lhi2o0rpp3dx" path="res://Entities/HUD.tscn" id="12_00b45"]
->>>>>>> Stashed changes
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_afbbo"]
 size = Vector3(200, 0.1, 200)
@@ -1215,5 +1207,3 @@ transform = Transform3D(0.9684588, 0.22283062, 0.11150798, -0.15795286, 0.202899
 light_energy = 3.0
 light_indirect_energy = 0.175
 light_volumetric_fog_energy = 1.66
-
-[node name="HUD" parent="." instance=ExtResource("12_00b45")]
