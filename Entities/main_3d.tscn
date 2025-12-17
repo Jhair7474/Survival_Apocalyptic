@@ -1,16 +1,16 @@
-[gd_scene load_steps=34 format=3 uid="uid://cmh2xys8unpyw"]
+[gd_scene load_steps=36 format=3 uid="uid://cmh2xys8unpyw"]
 
 [ext_resource type="Script" uid="uid://d020sn5rguimb" path="res://Scripts/main_3d.gd" id="1_pt58c"]
 [ext_resource type="PackedScene" uid="uid://d4aygbnxpv38f" path="res://Entities/player.tscn" id="1_wiwsh"]
 [ext_resource type="Texture2D" uid="uid://dawahdwwnubxr" path="res://assets/rocky_terrain_02_diff_4k.jpg" id="2_0s8ox"]
 [ext_resource type="PackedScene" uid="uid://cylduto540mk6" path="res://Entities/enemy.tscn" id="3_6rpgw"]
-[ext_resource type="PackedScene" path="res://Entities/ambientacion-tree.tscn" id="3_ocjag"]
-[ext_resource type="PackedScene" path="res://Heredaciones/cristales.tscn" id="4_mwwex"]
-[ext_resource type="PackedScene" path="res://Heredaciones/flores.tscn" id="5_nm6cl"]
-[ext_resource type="PackedScene" path="res://Entities/bush_2.tscn" id="6_wqp3n"]
-[ext_resource type="PackedScene" path="res://Heredaciones/ArbolMuerto1.tscn" id="7_f6xsg"]
+[ext_resource type="PackedScene" uid="uid://d1ch2fmjf0nij" path="res://Entities/ambientacion-tree.tscn" id="3_ocjag"]
+[ext_resource type="PackedScene" uid="uid://oqm01fgu6v47" path="res://Heredaciones/cristales.tscn" id="4_mwwex"]
+[ext_resource type="PackedScene" uid="uid://laww7fm1372i" path="res://Heredaciones/flores.tscn" id="5_nm6cl"]
+[ext_resource type="PackedScene" uid="uid://d0vya7haesvik" path="res://Entities/bush_2.tscn" id="6_wqp3n"]
+[ext_resource type="PackedScene" uid="uid://c4qe325tq7dw7" path="res://Heredaciones/ArbolMuerto1.tscn" id="7_f6xsg"]
 [ext_resource type="PackedScene" uid="uid://c7mp4vge02ogn" path="res://Entities/enemy_2.tscn" id="7_ocjag"]
-[ext_resource type="PackedScene" path="res://Heredaciones/arbol_muerto_3.tscn" id="8_00b45"]
+[ext_resource type="PackedScene" uid="uid://chvgf4plyx2ny" path="res://Heredaciones/arbol_muerto_3.tscn" id="8_00b45"]
 [ext_resource type="PackedScene" uid="uid://wt08mj65w5h7" path="res://Heredaciones/MedievalHouse1.tscn" id="9_7rl1c"]
 [ext_resource type="PackedScene" uid="uid://v4ssqjwjol2" path="res://Heredaciones/MedievalHouse2.tscn" id="10_63vju"]
 [ext_resource type="PackedScene" uid="uid://dy3o54ktm8442" path="res://Heredaciones/MedievalHouse3.tscn" id="11_bwf02"]
@@ -19,6 +19,8 @@
 [ext_resource type="PackedScene" uid="uid://bbmmognp2cqde" path="res://Heredaciones/Lapida.tscn" id="13_bwf02"]
 [ext_resource type="PackedScene" uid="uid://0adjpwr16rug" path="res://Heredaciones/CarretaMuertos.tscn" id="14_ic8mj"]
 [ext_resource type="PackedScene" uid="uid://c1pe1vl34po6a" path="res://Heredaciones/Muerto.tscn" id="15_ic8mj"]
+[ext_resource type="PackedScene" uid="uid://noxwswxcys5x" path="res://Heredaciones/Hokage_muro.tscn" id="18_4bqxx"]
+[ext_resource type="PackedScene" uid="uid://bhl8fcbxhr1mm" path="res://Heredaciones/muro.tscn" id="19_tl855"]
 [ext_resource type="PackedScene" uid="uid://b827vr1wemkv0" path="res://Entities/pause_menu.tscn" id="20_q1d3f"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_afbbo"]
@@ -683,7 +685,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.88521, 0.051409565, 18.355
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 89.69893, 0.051409565, -18.761932)
 
 [node name="Flores92" parent="Floor/Ambientacion/Flores" instance=ExtResource("5_nm6cl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.160774, 1.0514096, -90.18791)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.160774, -0.12889671, -90.18791)
 
 [node name="Flores93" parent="Floor/Ambientacion/Flores" instance=ExtResource("5_nm6cl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.709404, 0.051409565, -83.41234)
@@ -915,16 +917,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8594666, 0.19542444, -82.1
 [node name="ArbolesMuertos" type="Node3D" parent="Floor/Ambientacion"]
 
 [node name="ArbolMuerto1" parent="Floor/Ambientacion/ArbolesMuertos" instance=ExtResource("7_f6xsg")]
-transform = Transform3D(-0.35999697, 0, -0.9329535, 0, 1, 0, 0.9329535, 0, -0.35999697, -89.33849, -0.13601017, -83.47797)
+transform = Transform3D(-0.35999697, 0, -0.9329535, 0, 1, 0, 0.9329535, 0, -0.35999697, -89.33849, -0.20076275, -83.47797)
 
 [node name="ArbolMuerto3" parent="Floor/Ambientacion/ArbolesMuertos" instance=ExtResource("8_00b45")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.475815, 0.04555719, -84.51196)
 
 [node name="ArbolMuerto2" parent="Floor/Ambientacion/ArbolesMuertos" instance=ExtResource("7_f6xsg")]
-transform = Transform3D(0.02792158, 0, 0.9996101, 0, 1, 0, -0.9996101, 0, 0.02792158, -67.8087, 0.8059988, -84.22221)
+transform = Transform3D(0.02792158, 0, 0.9996101, 0, 1, 0, -0.9996101, 0, 0.02792158, -67.8087, -0.30946684, -84.22221)
 
 [node name="ArbolMuerto4" parent="Floor/Ambientacion/ArbolesMuertos" instance=ExtResource("8_00b45")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68.70633, 0.04555719, -81.43422)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68.70633, -0.12902243, -81.43422)
 
 [node name="ArbolMuerto5" parent="Floor/Ambientacion/ArbolesMuertos" instance=ExtResource("7_f6xsg")]
 transform = Transform3D(0.02792158, 0, 0.9996101, 0, 1, 0, -0.9996101, 0, 0.02792158, -85.578186, 0.8059988, -40.9769)
@@ -951,7 +953,7 @@ transform = Transform3D(0.02792158, 0, 0.9996101, 0, 1, 0, -0.9996101, 0, 0.0279
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.625877, 0.04555719, -41.267227)
 
 [node name="ArbolMuerto13" parent="Floor/Ambientacion/ArbolesMuertos" instance=ExtResource("8_00b45")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.823536, 1.2235603, -92.89718)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.823536, -0.12347412, -92.89718)
 
 [node name="ArbolMuerto14" parent="Floor/Ambientacion/ArbolesMuertos" instance=ExtResource("8_00b45")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68.29021, 0.04586688, -25.961044)
@@ -966,7 +968,7 @@ transform = Transform3D(0.24530742, 0, 0.96944535, 0, 1, 0, -0.96944535, 0, 0.24
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.611668, 0.04524547, -59.422318)
 
 [node name="ArbolMuerto18" parent="Floor/Ambientacion/ArbolesMuertos" instance=ExtResource("7_f6xsg")]
-transform = Transform3D(-0.962218, 0, 0.27228022, 0, 1, 0, -0.27228022, 0, -0.962218, -63.563572, -0.000651598, -63.04168)
+transform = Transform3D(-0.962218, 0, 0.27228022, 0, 1, 0, -0.27228022, 0, -0.962218, -63.563572, -0.33285642, -63.04168)
 
 [node name="ArbolMuerto19" parent="Floor/Ambientacion/ArbolesMuertos" instance=ExtResource("7_f6xsg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -92.265724, -0.1356759, -42.633366)
@@ -1196,6 +1198,45 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5978165, 0, 0)
 
 [node name="Sketchfab_Scene" parent="Floor/Ambientacion/Muertos/Muerto4" instance=ExtResource("15_ic8mj")]
 transform = Transform3D(0.2419219, 0, 0.9702957, 0, 1, 0, -0.9702957, 0, 0.2419219, -79.170586, 0, -21.086832)
+
+[node name="Muros" type="Node3D" parent="Floor/Ambientacion"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.699638, 54.15692, -51.57952)
+
+[node name="Hokage_muro" parent="Floor/Ambientacion/Muros" instance=ExtResource("18_4bqxx")]
+transform = Transform3D(-0.015585184, 0, -0.9998785, 0, 1, 0, 0.9998785, 0, -0.015585184, -88.76505, -56.465046, 67.94939)
+
+[node name="Muro" parent="Floor/Ambientacion/Muros" instance=ExtResource("19_tl855")]
+transform = Transform3D(-0.9995389, 0, 0.03036405, 0, 1, 0, -0.03036405, 0, -0.9995389, -2.63797, -56.169758, -48.166565)
+
+[node name="Muro2" parent="Floor/Ambientacion/Muros" instance=ExtResource("19_tl855")]
+transform = Transform3D(-0.49976945, 0, 0.03036405, 0, 1, 0, -0.015182025, 0, -0.9995389, 76.82515, -56.169758, -46.870293)
+
+[node name="Muro3" parent="Floor/Ambientacion/Muros" instance=ExtResource("19_tl855")]
+transform = Transform3D(-0.59972334, 0, 0.03036405, 0, 1, 0, -0.01821843, 0, -0.9995389, -67.80718, -56.169758, -46.870293)
+
+[node name="Muro4" parent="Floor/Ambientacion/Muros" instance=ExtResource("19_tl855")]
+transform = Transform3D(0.9987561, 0, -0.04986084, 0, 1, 0, 0.04986084, 0, 0.9987561, 25.434454, -56.169758, 150.71886)
+
+[node name="Muro5" parent="Floor/Ambientacion/Muros" instance=ExtResource("19_tl855")]
+transform = Transform3D(0.49937806, 0, -0.04986084, 0, 1, 0, 0.02493042, 0, 0.9987561, -59.06225, -56.169758, 151.23424)
+
+[node name="Muro6" parent="Floor/Ambientacion/Muros" instance=ExtResource("19_tl855")]
+transform = Transform3D(0.59925365, 0, -0.049860835, 0, 1, 0, 0.029916503, 0, 0.9987561, 90.616554, -56.169758, 152.59286)
+
+[node name="Muro7" parent="Floor/Ambientacion/Muros" instance=ExtResource("19_tl855")]
+transform = Transform3D(0.04187565, 0, 0.9991228, 0, 1, 0, -0.9991228, 0, 0.04187565, 108.83458, -56.169758, 29.469284)
+
+[node name="Muro8" parent="Floor/Ambientacion/Muros" instance=ExtResource("19_tl855")]
+transform = Transform3D(0.025125423, 0, 0.9991228, 0, 1, 0, -0.5994737, 0, 0.041875705, 106.623055, -56.169758, 108.91221)
+
+[node name="Muro9" parent="Floor/Ambientacion/Muros" instance=ExtResource("19_tl855")]
+transform = Transform3D(0.025125392, 0, 0.9991228, 0, 1, 0, -0.59947366, 0, 0.041875646, 108.4931, -56.169758, -35.71215)
+
+[node name="Muro10" parent="Floor/Ambientacion/Muros" instance=ExtResource("19_tl855")]
+transform = Transform3D(-0.011748781, 0, -0.9998083, 0, 1, 0, 0.599885, 0, -0.019581307, -88.53854, -56.169758, 133.27621)
+
+[node name="Muro11" parent="Floor/Ambientacion/Muros" instance=ExtResource("19_tl855")]
+transform = Transform3D(-0.049413558, 0, -0.99660295, 0, 1, 0, 0.5979617, 0, -0.08235593, -88.58545, -56.169758, -8.494209)
 
 [node name="Player" parent="." instance=ExtResource("1_wiwsh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.035892487, 0)

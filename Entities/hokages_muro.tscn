@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbmaxpptjfxyq"]
+
+[ext_resource type="PackedScene" uid="uid://b8c50kgeiw0ur" path="res://GlobalAsset/six_hokage_mountain/scene.gltf" id="1_egkht"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_egkht")]
+transform = Transform3D(0.001, 0, 0, 0, 0.001, 0, 0, 0, 0.001, 0, 0, 0)

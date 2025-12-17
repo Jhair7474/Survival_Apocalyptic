@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhl8fcbxhr1mm"]
+
+[ext_resource type="PackedScene" uid="uid://c67p5yiyupc3g" path="res://Entities/muro.tscn" id="1_j0rpv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kadf7"]
+size = Vector3(111.51422, 25.325943, 3.010254)
+
+[node name="Muro" type="StaticBody3D"]
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_j0rpv")]
+transform = Transform3D(0.001, 0, 0, 0, 0.001, 0, 0, 0, 0.001, -0.1067189, 0, -32.01102)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.559479, 11.071526, 0.1603241)
+shape = SubResource("BoxShape3D_kadf7")
