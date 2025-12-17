@@ -5,6 +5,8 @@ extends CharacterBody3D
 @export var rotation_speed: float = 5.0
 const JUMP_VELOCITY = 4.5
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
+signal player_died
+signal health_changed(new_amount)
 
 # --- ESTADÍSTICAS DEL JUGADOR ---
 @export var max_health: int = 100
@@ -123,6 +125,7 @@ func take_damage(amount: int):
 	if is_dead: return
 	
 	current_health -= amount
+	health_changed.emit(current_health)
 	print("Jugador herido. Vida: ", current_health)
 	
 	if current_health <= 0:
@@ -135,11 +138,15 @@ func take_damage(amount: int):
 		anim_player.play(ANIM_HIT_REACT)
 
 func die():
+	if is_dead: return
 	is_dead = true
 	print("El jugador ha muerto.")
+	
+	# --- AGREGAR ESTO: Emitir señal ---
+	player_died.emit()
+	
 	anim_player.play(ANIM_DEATH)
-	# Desactivar colisiones o reiniciar escena después de un tiempo
-	set_physics_process(false) # Dejar de procesar físicas
+	set_physics_process(false)
 
 # Callback cuando termina una animación
 func _on_animation_finished(anim_name: String):

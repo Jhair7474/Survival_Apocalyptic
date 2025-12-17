@@ -1,0 +1,95 @@
+[gd_scene load_steps=5 format=3 uid="uid://lhi2o0rpp3dx"]
+
+[ext_resource type="Script" uid="uid://cmogwftrcnajq" path="res://Scripts/hud.gd" id="1_xucrk"]
+[ext_resource type="FontFile" uid="uid://ban2ue7efgjp7" path="res://fonts/Metal Glass.otf" id="2_2wr1u"]
+[ext_resource type="FontFile" uid="uid://s5u46ldwkka8" path="res://fonts/Pixel-Regular.ttf" id="2_vpcqv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2wr1u"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.95024484, 0.24092191, 0.32558885, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+shadow_color = Color(0.4326237, 0.43262374, 0.4326237, 0.6)
+shadow_size = 4
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_xucrk")
+
+[node name="GameInfo" type="CanvasLayer" parent="."]
+
+[node name="LabelScore" type="Label" parent="GameInfo"]
+offset_left = 894.0
+offset_top = 8.0
+offset_right = 1130.0
+offset_bottom = 101.0
+theme_override_fonts/font = ExtResource("2_2wr1u")
+theme_override_font_sizes/font_size = 25
+
+[node name="LabelWave" type="Label" parent="GameInfo"]
+offset_left = 477.0
+offset_top = 83.0
+offset_right = 898.0
+offset_bottom = 178.0
+theme_override_fonts/font = ExtResource("2_2wr1u")
+theme_override_font_sizes/font_size = 28
+
+[node name="LabelEnemies" type="Label" parent="GameInfo"]
+offset_left = 37.0
+offset_top = 14.0
+offset_right = 345.0
+offset_bottom = 68.0
+theme_override_fonts/font = ExtResource("2_2wr1u")
+theme_override_font_sizes/font_size = 25
+
+[node name="HeartIcon" type="TextureRect" parent="GameInfo"]
+offset_left = 18.0
+offset_top = 579.0
+offset_right = 73.0
+offset_bottom = 631.0
+
+[node name="HealthBar" type="ProgressBar" parent="GameInfo"]
+offset_left = 78.0
+offset_top = 597.0
+offset_right = 255.0
+offset_bottom = 624.0
+theme_override_fonts/font = ExtResource("2_vpcqv")
+theme_override_styles/fill = SubResource("StyleBoxFlat_2wr1u")
+
+[node name="GameOverScreen" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Panel" type="Panel" parent="GameOverScreen"]
+offset_right = 1153.0
+offset_bottom = 645.0
+
+[node name="LabelTitle" type="Label" parent="GameOverScreen"]
+offset_left = 255.0
+offset_top = 222.0
+offset_right = 913.0
+offset_bottom = 322.0
+theme_override_colors/font_color = Color(0.628747, 0.3017025, 0.14522785, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_vpcqv")
+theme_override_font_sizes/font_size = 99
+text = "GAME OVER"
+
+[node name="ButtonRetry" type="Button" parent="GameOverScreen"]
+offset_left = 246.0
+offset_top = 425.0
+offset_right = 553.0
+offset_bottom = 514.0
+theme_override_fonts/font = ExtResource("2_2wr1u")
+theme_override_font_sizes/font_size = 40
+text = "REINTENTAR"
+
+[node name="ButtonMenu" type="Button" parent="GameOverScreen"]
+offset_left = 647.0
+offset_top = 423.0
+offset_right = 903.0
+offset_bottom = 517.0
+theme_override_fonts/font = ExtResource("2_2wr1u")
+theme_override_font_sizes/font_size = 45
+text = "MENU"
